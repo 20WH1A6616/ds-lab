@@ -91,6 +91,5 @@ cse@cselab:~/Desktop$ vim sll_list.c
 cse@cselab:~/Desktop$ gcc sll_list.c
 cse@cselab:~/Desktop$ ./a.out
 1-create
-2-insert_begin
-3-insert_end
+
 -- INSERT --                      
