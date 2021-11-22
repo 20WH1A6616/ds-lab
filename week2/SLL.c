@@ -29,6 +29,7 @@
   return head;
   
   }
+   #display funtion
   void display(struct node*head)
   {
     temp = head;
@@ -38,12 +39,23 @@
       temp=temp->link;
      }
   }
+  # insert_begin
+    struct node*insert_begin(int ele);
+ {
+  printf("enter the element to insert");
+  scanf("%d",&ele);  
+  cur = (struct node*)malloc(sizeof(struct node));
+    cur->link = head;
+     head = cur;
+  
+  return head;
+ }
   
   int main()
   {
     int ch;
     while(1){
-      printf("1-create");
+      printf("1-create\n,2-insert_begin");
       printf("enter your choce");
       scanf("%d",&ch);
   
@@ -52,13 +64,15 @@
        case 1:head = create();
               break;
        case 2:display(head);
-             break;
+              break;
+        case 3:head = insert_begin(ele)
+                break;  
        case 3:exit(0);
 out put case 1;
 cse@cselab:~/Desktop$ vim sll_list.c
 cse@cselab:~/Desktop$ gcc sll_list.c
 cse@cselab:~/Desktop$ ./a.out
 1-create
-
+2-insert_begin
 
 -- INSERT --                      
