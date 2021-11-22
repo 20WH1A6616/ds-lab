@@ -50,12 +50,28 @@
   
   return head;
  }
+ 
+   struct node*insert_end(int ele);
+ {
+  printf("enter the element to insert");
+  scanf("%d",&ele);
+  cur = (struct node*)malloc(sizeof(struct node));
+    cur->data = ele;
+    cur->link = NULL;
+    temp = head;
+    while(temp->link!=NULL)
+  {
+    temp = temp->link;
+    temp->link = cur;
+  }  
+  return head;
+ }
   
   int main()
   {
     int ch;
     while(1){
-      printf("1-create\n,2-insert_begin");
+      printf("1-create\n,2-insert_begin\n,3-insert_end");
       printf("enter your choce");
       scanf("%d",&ch);
   
@@ -65,8 +81,10 @@
               break;
        case 2:display(head);
               break;
-        case 3:head = insert_begin(ele)
-                break;  
+       case 3:head = insert_begin(ele)
+               break;  
+       case 4:head = insert_end(ele)
+              break
        case 3:exit(0);
 out put case 1;
 cse@cselab:~/Desktop$ vim sll_list.c
@@ -74,5 +92,5 @@ cse@cselab:~/Desktop$ gcc sll_list.c
 cse@cselab:~/Desktop$ ./a.out
 1-create
 2-insert_begin
-
+3-insert_end
 -- INSERT --                      
