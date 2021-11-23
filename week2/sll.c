@@ -1,5 +1,5 @@
  #include<stdio.h>
-   #include<stdlib.h>
+ #include<stdlib.h>
     struct node{
             int data;
             struct node*link;
@@ -39,8 +39,37 @@
         temp=temp->link;
        }
     }
+
+  # insert_begin
+    struct node*insert_begin(int ele);
+ {
+  printf("enter the element to insert");
+  scanf("%d",&ele);  
+  cur = (struct node*)malloc(sizeof(struct node));
+    cur->link = head;
+     head = cur;
   
-   struct node*insert_position(int pos,int ele)
+  return head;
+ }
+ 
+   struct node*insert_end(int ele);
+ {
+  printf("enter the element to insert");
+  scanf("%d",&ele);
+  cur = (struct node*)malloc(sizeof(struct node));
+    cur->data = ele;
+    cur->link = NULL;
+    temp = head;
+    while(temp->link!=NULL)
+  {
+    temp = temp->link;
+    temp->link = cur;
+  }  
+  return head;
+ }
+
+
+  struct node*insert_position(int pos,int ele)
     {
      int c = 1;
      cur = (struct node*)malloc(sizeof(struct node));
@@ -176,6 +205,7 @@
  
    }
  }
+output:   
  
 cse@cselab:~/Desktop$ gcc insertion.c
 cse@cselab:~/Desktop$ ./a.out
