@@ -61,3 +61,69 @@ int main()
          }
 }
                                                                                                                                          41,30-37       8%
+Out put;
+(base) cse@cselab8-03:~/Desktop$ vim queuearrays.c
+(base) cse@cselab8-03:~/Desktop$ gcc queuearrays.c
+(base) cse@cselab8-03:~/Desktop$ ./a.out
+1-enqueue
+2-dequeuedisplay
+4-exit
+enter your choice1^Z
+[1]+  Stopped                 ./a.out
+(base) cse@cselab8-03:~/Desktop$ vim queuearrays.c
+(base) cse@cselab8-03:~/Desktop$ gcc queuearrays.c
+(base) cse@cselab8-03:~/Desktop$ ./a.out
+1-enqueue
+2-dequeue
+3-display
+4-exit
+enter your choice4
+(base) cse@cselab8-03:~/Desktop$ gcc queuearrays.c
+(base) cse@cselab8-03:~/Desktop$ ./a.out
+1-enqueue
+2-dequeue
+3-display
+4-exit
+enter your choice1
+enter ele to be deleted2
+1-enqueue
+2-dequeue
+3-display
+4-exit
+enter your choice3
+2
+1-enqueue
+2-dequeue
+3-display
+4-exit
+enter your choice2
+queue underflow1-enqueue
+2-dequeue
+3-display
+4-exit
+enter your choice3
+queue is empty1-enqueue
+2-dequeue
+3-display
+4-exit
+enter your choice2
+queue underflow1-enqueue
+2-dequeue
+3-display
+4-exit
+enter your choice1
+enter ele to be deleted4
+1-enqueue
+2-dequeue
+3-display
+4-exit
+enter your choice26
+1-enqueue
+2-dequeue
+3-display
+4-exit
+enter your choice^Z
+[2]+  Stopped                 ./a.out
+(base) cse@cselab8-03:~/Desktop$ vim queuearrays.c
+(base) cse@cselab8-03:~/Desktop$
+
