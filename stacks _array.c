@@ -1,87 +1,93 @@
 #include<stdio.h>
 #include<stdlib.h>
-int a[10], front = -1, rear=-1;
-void enqueue(int ele){
-    int size;
-    if(front==-1&&rear==-1){
-        front=rear=0;
-        a[front] = ele;
-    }
-    else if(rear<size-1){
-        rear++;
-        a[rear]=ele;
-    }
-    else{
-        printf("Stack is full, overflow");
-    }
+#define SIZE 5
+int i,ele,top =-1.stack[SIZE];
+void push(int ele){
+    stack[++top] =ele;
 }
-void dequeue(){
-    if((front==-1&&rear==-1)||(rear<front)){
-        printf("Stack is empty, Underflow");
-    }
-    else{
-        printf("%d\n", front);
-        printf("%d is deleted",a[front++]);
-    }
+int pop(){
+    return(stack[top--]);
 }
+
+        
+int peek(){
+    return(stack[top])
+    }
 void display(){
-    if((front==-1&&rear==-1)||(rear<front)){
-        printf("Stack is empty, Underflow");
+    for(i=0;i>=0;i--){
+        printf("%d\n",stack[i]);
     }
-    else{
-        printf("%d\n", front);
-        for(int i=front; i<=rear; i++){
-            printf("%d\t", a[i]);
-        }
-    }
-}
+}  
 int main(){
-    int ch, e, term;
+    int ch;
     while(1){
-        printf("\n1.enqueue\n2.dequeue\n3.Display\n4.exit");
+        printf("\n1.push\n2.pop\n3.peek\n4.Display\n4.exit");
         printf("\nEnter the choice: ");
         scanf("%d", &ch);
         switch (ch)
         {
-            case 1:
-                printf("Enter the element to inserted: ");
-                scanf("%d", &e);
-                dequeue(e);
-                break;
-            case 2:
-                enqueue();
-                break;
-            case 3:
-                display();
-                break;
-            case 4:
-                exit(0);
+            case 1:if(top == SIZE-1){
+                      printf("stack overflow");
+                   }
+                   else{
+                    printf("Enter the element to inserted: ");
+                    scanf("%d", &e);
+                    push(e);
+                   }
+                    break;
+            case 2:if(top == -1)
+                    printf("stack undrflow");
+                   }
+                   else{
+                    printf(deleted elememt is %d".pop());
+                    }
+                   break;
+            case 3:if(top == -1){
+                     printf("stack undeflow");
+                    }
+                   else{
+                       printf("top element is %d",peek());
+                    }
+                     break;
+                         
+            case 4:if(top == -1){
+                     printf("stack overflow");
+                     }
+                     else{
+                         display()
+                         }
+                       break;    
+              case 5:  exit(0);
                 break;
         }
     }
 }
 
 output:
-1-enqueue
-2-dequeue
-3-display
-4-exit
+1-push
+2-pop
+3-peek
+4-display
+5-exit
 enter your choice:1 
 enter element to be inserted:5
 
 
-1-enqueue
-2-dequeue
-3-display
-4-exit
+1-push
+2-pop
+3-peek
+4-display
+5-exit                           
+                           
 enter your choice:1
 element to be inserted :7
 
 
-1-enqueue
-2-dequeue
-3-display
-4-exit
+1-push
+2-pop
+3-peek
+4-display
+5-exit                           
 enter your choice:3
 5
 7
